@@ -1,11 +1,10 @@
+import { Typography } from "@mui/material";
 import React from "react";
 
 export function Terms() {
   return (
     <div>
-      <h2>
-        <strong>Terms and Conditions</strong>
-      </h2>
+      <strong>Terms and Conditions</strong>
 
       <p>Welcome to My-To-Do-Project!</p>
 

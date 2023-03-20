@@ -87,7 +87,7 @@ export function Register() {
         justifyContent="center"
         alignItems="center"
       >
-        <img className="register-image" src="src/images/lake.jpg" />
+        <img className="register-image" src="/src/img/lake.jpg" />
         <Typography color="#fafafa" textAlign="center" variant="h2">
           Register
         </Typography>
