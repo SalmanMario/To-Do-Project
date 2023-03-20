@@ -6,6 +6,7 @@ import "./App.css";
 import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
 import { MainPage } from "./pages/MainPage";
+import { Terms } from "./pages/Terms";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/mainpage" element={<MainPage />} />
+          <Route path="/terms" element={<Terms />} />
         </Routes>
       </Router>
     </div>

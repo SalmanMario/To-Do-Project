@@ -1,4 +1,4 @@
-import { Button, Checkbox, FormControlLabel, Stack, TextField, Typography } from "@mui/material";
+import { Button, Checkbox, FormControlLabel, Link, Stack, TextField, Typography } from "@mui/material";
 import { teal } from "@mui/material/colors";
 import { Box, style } from "@mui/system";
 import { auth } from "../firebase.js";
@@ -87,7 +87,7 @@ export function Register() {
         justifyContent="center"
         alignItems="center"
       >
-        <img className="register-image" src="../src/images/lake.jpg"></img>
+        <img className="register-image" src="../src/images/lake.jpg" />
         <Typography color="#fafafa" textAlign="center" variant="h2">
           Register
         </Typography>
@@ -143,10 +143,10 @@ export function Register() {
           id="confirmPassword"
           label="Confirm Password"
         />
-        <FormControlLabel
-          label="I agree with terms & conditions"
-          control={<Checkbox onClick={checkBoxHandler} {...label} />}
-        />
+        <Link href="/terms" target="_blank">
+          <Checkbox sx={{ "&.Mui-checked": { color: teal[500] } }} onClick={checkBoxHandler} />
+          <span className="link-terms">I agree with terms & conditions</span>
+        </Link>
         <Box>
           <Button
             sx={{ mx: 2, width: 125, bgcolor: teal[800], "&:hover": { bgcolor: teal[400] } }}
@@ -168,3 +168,6 @@ export function Register() {
     </div>
   );
 }
+
+// label="I agree with terms & conditions"
+//           control={<Checkbox label={label} onClick={checkBoxHandler} />}

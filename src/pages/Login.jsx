@@ -51,7 +51,7 @@ export function Login() {
         justifyContent="center"
         alignItems="center"
       >
-        <img className="register-image" src="../src/images/lake.jpg"></img>
+        <img className="register-image" src="../src/images/lake.jpg" />
         <Typography textAlign="center" sx={{ color: "#fafafa" }} variant="h2">
           My To-Do Project
         </Typography>
