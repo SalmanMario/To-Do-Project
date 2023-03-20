@@ -51,7 +51,10 @@ export function Login() {
         justifyContent="center"
         alignItems="center"
       >
-        <img className="register-image" src="/src/img/lake.jpg" />
+        <img
+          className="register-image"
+          src="https://img.freepik.com/free-vector/gradient-lake-scenery_23-2149151145.jpg"
+        />
         <Typography textAlign="center" sx={{ color: "#fafafa" }} variant="h2">
           My To-Do Project
         </Typography>
