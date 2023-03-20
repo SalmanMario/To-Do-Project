@@ -5,6 +5,7 @@ import { teal } from "@mui/material/colors";
 import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { Stack } from "@mui/system";
+import imgUrl from "../img/lake.jpg";
 
 export function Login() {
   const [email, setEmail] = useState("");
@@ -51,7 +52,7 @@ export function Login() {
         justifyContent="center"
         alignItems="center"
       >
-        <img className="register-image" src="../src/img/lake.jpg" />
+        <img className="register-image" src={imgUrl} />
         <Typography textAlign="center" sx={{ color: "#fafafa" }} variant="h2">
           My To-Do Project
         </Typography>
