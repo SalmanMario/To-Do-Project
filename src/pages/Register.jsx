@@ -87,10 +87,7 @@ export function Register() {
         justifyContent="center"
         alignItems="center"
       >
-        <img
-          className="register-image"
-          src="https://img.freepik.com/free-vector/gradient-lake-scenery_23-2149151145.jpg"
-        />
+        <img className="register-image" src="../src/img/lake.jpg" />
         <Typography color="#fafafa" textAlign="center" variant="h2">
           Register
         </Typography>
