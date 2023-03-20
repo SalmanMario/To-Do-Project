@@ -87,7 +87,7 @@ export function Register() {
         justifyContent="center"
         alignItems="center"
       >
-        <img className="register-image" src="../../public/images/lake.jpg" />
+        <img className="register-image" src="../src/assets/lake.jpg" />
         <Typography color="#fafafa" textAlign="center" variant="h2">
           Register
         </Typography>
@@ -168,6 +168,3 @@ export function Register() {
     </div>
   );
 }
-
-// label="I agree with terms & conditions"
-//           control={<Checkbox label={label} onClick={checkBoxHandler} />}
