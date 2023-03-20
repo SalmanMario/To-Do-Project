@@ -6,7 +6,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import "../pages/register.css";
-import lake from "../../public/images/lake.jpg";
 
 export function Register() {
   // Disable/Enable button pentru checkbox true sau false
@@ -88,7 +87,7 @@ export function Register() {
         justifyContent="center"
         alignItems="center"
       >
-        <img className="register-image" src={lake} />
+        <img className="register-image" src="src/images/lake.jpg" />
         <Typography color="#fafafa" textAlign="center" variant="h2">
           Register
         </Typography>
