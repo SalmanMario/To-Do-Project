@@ -18,6 +18,11 @@ input:-webkit-autofill:active {
   -webkit-text-fill-color: #fafafa !important;
 }
 
+.mainpage-color {
+  background-color: #187fa5;
+  height: 100%;
+}
+
 .register-color {
   background-color: #80cbc4;
   height: 100%;
