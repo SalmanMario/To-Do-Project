@@ -5,6 +5,7 @@ import AddIcon from "@mui/icons-material/Add";
 import DeleteIcon from "@mui/icons-material/Delete";
 import CheckIcon from "@mui/icons-material/Check";
 import EditIcon from "@mui/icons-material/Edit";
+import FeedIcon from "@mui/icons-material/Feed";
 import { auth, db } from "../firebase";
 import { ref, remove, update } from "firebase/database";
 
@@ -70,7 +71,7 @@ export function Todo({ todo }) {
       ) : (
         <>
           <Button
-            sx={{ m: 1, bgcolor: orange[600], "&:hover": { bgcolor: orange[700] } }}
+            sx={{ m: 1, bgcolor: green[500], "&:hover": { bgcolor: green[600] } }}
             variant="contained"
             endIcon={<CheckIcon />}
             onClick={handleEditConfirm}
@@ -80,7 +81,7 @@ export function Todo({ todo }) {
           <Button
             sx={{ m: 1, bgcolor: orange[600], "&:hover": { bgcolor: orange[700] } }}
             variant="contained"
-            endIcon={<CheckIcon />}
+            endIcon={<FeedIcon />}
             onClick={handleDiscard}
           >
             Discard
