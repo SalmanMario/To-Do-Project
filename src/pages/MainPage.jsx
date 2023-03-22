@@ -12,6 +12,7 @@ import AddIcon from "@mui/icons-material/Add";
 import DeleteIcon from "@mui/icons-material/Delete";
 import CheckIcon from "@mui/icons-material/Check";
 import EditIcon from "@mui/icons-material/Edit";
+import { Todo } from "../components/Todo";
 
 export function MainPage() {
   const [todo, setTodo] = useState("");
@@ -50,31 +51,11 @@ export function MainPage() {
   const writeToDatabase = () => {
     const uidd = uid();
     set(ref(db, `/${auth.currentUser.uid}/${uidd}`), {
-      todo: todo,
+      name: todo,
       uidd: uidd,
     });
 
     setTodo("");
-  };
-
-  const handleDelete = (uid) => {
-    remove(ref(db, `/${auth.currentUser.uid}/${uid}`));
-  };
-
-  const handleEditConfirm = () => {
-    update(ref(db, `/${auth.currentUser.uid}/${tempUidd}`), {
-      todo: todo,
-      tempUidd: tempUidd,
-    });
-
-    setTodo("");
-    setIsEdit(false);
-  };
-
-  const handleUpdate = (todo) => {
-    setIsEdit(true);
-    setTodo(todo.todo);
-    setTempUidd(todo.uidd);
   };
   return (
     <div className="mainpage-color">
@@ -111,38 +92,7 @@ export function MainPage() {
         </Box>
         <Box>
           {todos.map((todo, index) => (
-            <Box key={index}>
-              <Typography sx={{ m: 2, bgcolor: blue[500], borderRadius: 5, px: 3 }} textAlign="center" variant="h4">
-                {todo.todo}
-              </Typography>
-
-              <Button
-                sx={{ m: 1, bgcolor: green[500], "&:hover": { bgcolor: green[600] } }}
-                variant="contained"
-                endIcon={<EditIcon />}
-                onClick={() => handleUpdate(todo)}
-              >
-                Update
-              </Button>
-              {isEdit ? (
-                <Button
-                  sx={{ m: 1, bgcolor: orange[600], "&:hover": { bgcolor: orange[700] } }}
-                  variant="contained"
-                  endIcon={<CheckIcon />}
-                  onClick={handleEditConfirm}
-                >
-                  Confirm
-                </Button>
-              ) : null}
-              <Button
-                sx={{ m: 1, bgcolor: red[800], "&:hover": { bgcolor: red[700] } }}
-                variant="contained"
-                endIcon={<DeleteIcon />}
-                onClick={() => handleDelete(todo.uidd)}
-              >
-                Delete
-              </Button>
-            </Box>
+            <Todo key={index} todo={todo} />
           ))}
           <Button
             sx={{ mt: 10, bgcolor: blue[700], "&:hover": { bgcolor: blue[900] } }}
